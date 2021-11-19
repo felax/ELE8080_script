@@ -18,7 +18,7 @@ async function getData(url = '', data = {}) {
 }
 
 async function populateSelect() {
-    const projects = await getData("https://app.asana.com/api/1.0/teams/"+TEAM_GID+"/projects?limit=10");
+    const projects = await getData("https://app.asana.com/api/1.0/teams/"+TEAM_GID+"/projects?limit=100");
     const select = document.getElementById("projects");
     for (const project of projects.data) {
         const option = document.createElement("option");
